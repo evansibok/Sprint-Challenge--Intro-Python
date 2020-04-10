@@ -8,13 +8,16 @@ class GroundVehicle():
     def __init__(self, num_wheels=4):
         self.num_wheels = num_wheels
 
+    def __str__(self):
+        print(f"{self.num_wheels}")
+
     # TODO
     def drive(self):
         return "Vroooom"
 
 
 g = GroundVehicle()
-print("GroundV", g.drive())
+print("GroundV", g.drive())  # Error when I return just g. WHYYYY?
 
 
 # Subclass Motorcycle from GroundVehicle.
@@ -28,11 +31,10 @@ print("GroundV", g.drive())
 class Motorcycle(GroundVehicle):
     def __init__(self, num_wheels=2):
         super().__init__(num_wheels)
-        pass
 
+    def drive(self):
+        return "BRAAAP!!"
 
-m = Motorcycle()
-print("Motorcycle Wheels", m.num_wheels)
 
 vehicles = [
     GroundVehicle(),
@@ -45,3 +47,5 @@ vehicles = [
 # Go through the vehicles list and print the result of calling drive() on each.
 
 # TODO
+for v in vehicles:
+    print(f"Wheels: {v.num_wheels} {v.drive()}")
