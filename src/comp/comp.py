@@ -34,7 +34,7 @@ print(a)
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = []
+b = [n.name for n in humans if n.name.lower().endswith('e')]
 print(b)
 
 # Write a list comprehension that creates a list of names of everyone
