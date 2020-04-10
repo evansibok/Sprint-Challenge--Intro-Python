@@ -9,7 +9,7 @@ class GroundVehicle():
         self.num_wheels = num_wheels
 
     def __str__(self):
-        print(f"{self.num_wheels}")
+        return f"{self.num_wheels}"
 
     # TODO
     def drive(self):
