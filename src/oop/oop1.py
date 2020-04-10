@@ -49,3 +49,15 @@ class GroundVehicle(Vehicle):  # GroundVehicle as a subclass of Vehicle
     def __init__(self, name):
         super().__init__(name)
         pass
+
+
+class Car(GroundVehicle):  # Car as a subclass of GroundVehicle
+    def __init__(self, name):
+        super().__init__(name)
+        pass
+
+
+class Motorcycle(GroundVehicle):  # Motorcycle as a subclass of GroundVehicle
+    def __init__(self, name):
+        super().__init__(name)
+        pass
