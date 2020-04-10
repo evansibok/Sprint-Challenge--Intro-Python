@@ -6,8 +6,8 @@ import csv
 class City:
     def __init__(self, name, lat, lon):
         self.name = name
-        self.lat = lat
-        self.lon = lon
+        self.lat = float(lat)
+        self.lon = float(lon)
 
     def __str__(self):
         return "%s %f %f" % (self.name, self.lat, self.lon)
@@ -35,8 +35,8 @@ def cityreader(cities=[]):
     with open(r"src\cityreader\cities.csv") as csvfile:
         content = csv.DictReader(csvfile)
         for row in content:
-            newCity = City(row['city'], float(row['lat']), float(row['lng']))
-            cities.append((newCity.name, newCity.lat, newCity.lon))
+            # newCity = City(row['city'], float(row['lat']), float(row['lng']))
+            cities.append(City(row['city'], row['lat'], row['lng']))
 
     return cities
 
